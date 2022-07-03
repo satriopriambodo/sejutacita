@@ -20,14 +20,6 @@ const errorHandler = (err, req, res, next) => {
     (errCode = 400), (msg = "Bad Request");
   } else if (err.name == "Unauthorized") {
     (errCode = 401), (msg = "Wrong email/password");
-  } else if (err.name == "file type is not image") {
-    (errCode = 400), (msg = "Wrong file type");
-  } else if (err.code == "LIMIT_FILE_SIZE") {
-    (errCode = 400), (msg = "File is too large");
-  } else if (err.name == "User_not_found") {
-    (errCode = 401), (msg = "Unauthorized");
-  } else if (err.name == "Cant change") {
-    (errCode = 400), (msg = "Same status");
   }
 
   res.status(errCode).json({
