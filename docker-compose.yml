@@ -1,0 +1,7 @@
+# version:
+# services:
+#   my-node:
+#     container_name: 
+#     build .
+#     ports:
+     
